@@ -73,6 +73,7 @@ jobs:
               id: get_kubeconfig
               if: steps.apply.outcome == 'success' || github.ref == 'refs/heads/stage'
               run: aws eks update-kubeconfig --name ${{ env.EKS_CLUSTER }} --region ${{ env.AWS_REGION }}
+              continue-on-error: true
 
             - name: Install Ingress Controller
               id: install_ingress
