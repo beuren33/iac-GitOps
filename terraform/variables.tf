@@ -10,5 +10,4 @@ variable "clusterName" {
   default     = "git-ops-EKS"
 }
 ##
-##
-##
+###
